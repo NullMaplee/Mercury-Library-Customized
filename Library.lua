@@ -99,6 +99,15 @@ local Library = {
 }
 Library.__index = Library
 
+function ConvertToStandardTime(ArmyTime)
+    local SplitArmy = string.split(ArmyTime, ":")
+    if tonumber(SplitArmy[1]) > 12 then
+        return tonumber(SplitArmy[1]) - 12 .. ":" .. SplitArmy[2] .. " PM"
+    else
+        return ArmyTime + " AM"
+    end
+end
+
 local selectedTab
 
 Library._promptExists = false
@@ -806,7 +815,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -20}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = tostring(os.date("%X")):sub(1, os.date("%X"):len()-3)
+		Text = ConvertToStandardTime(tostring(os.date("%X")):sub(1, os.date("%X"):len()-3))
 	})
 
 	do
