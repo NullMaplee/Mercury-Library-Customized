@@ -826,7 +826,7 @@ function Library:create(options)
 			if counter >= desiredInterval then
 				counter -= desiredInterval
 				local date = tostring(os.date("%X"))
-				timeDisplay.Text = date:sub(1, date:len()-3)
+				timeDisplay.Text = ConvertToStandardTime(date:sub(1, date:len()-3))
 			end
 		end)
 	end
