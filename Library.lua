@@ -104,7 +104,7 @@ function ConvertToStandardTime(ArmyTime)
     if tonumber(SplitArmy[1]) > 12 then
         return tonumber(SplitArmy[1]) - 12 .. ":" .. SplitArmy[2] .. " PM"
     else
-        return ArmyTime + " AM"
+        return ArmyTime .. " AM"
     end
 end
 
