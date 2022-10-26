@@ -809,7 +809,7 @@ function Library:create(options)
 	
 	local gameCount = profile:object("TextLabel", {
 	    BackgroundTransparency = 1,
-	    Position = UDim2.new(0, 80, 1, -10),
+	    Position = UDim2.new(0, 105, 1, -10),
 	    Size = UDim2.new(0, 400,0, 20),
 	    AnchorPoint = Vector2.new(0, 1),
 	    Theme = {TextColor3 = {"WeakText", -20}},
