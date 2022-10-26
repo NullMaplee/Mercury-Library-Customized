@@ -806,6 +806,17 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		TextXAlignment = Enum.TextXAlignment.Left
 	})
+	
+	local gameCount = profile:object("TextLabel", {
+	    BackgroundTransparency = 1,
+	    Position = UDim2.new(0, 80, 1, -10),
+	    Size = UDim2.new(0, 400,0, 20),
+	    AnchorPoint = Vector2.new(0, 1),
+	    Theme = {TextColor3 = {"WeakText", -20}},
+	    TextScaled = true,
+	    TextXAlignment = Enum.TextXAlignment.Left,
+	    Text = "Game Number Here"
+	})
 
 	local timeDisplay = profile:object("TextLabel", {
 		BackgroundTransparency = 1,
